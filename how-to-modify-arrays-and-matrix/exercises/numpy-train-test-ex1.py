@@ -8,9 +8,9 @@ data = genfromtxt('data.csv', delimiter=',', dtype=str, skip_header=1)
 # and five rows for test
 split = 15
 train, test = data[:split,:], data[split:,:]
-# printing train array
+# printing training array
 print(train)
 print("\n")
 
-# printing test array
+# printing testing array
 print(test)
