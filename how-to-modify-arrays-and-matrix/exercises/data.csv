@@ -1,25 +1,21 @@
-Store_ID,Store_Name,Product_ID,Product_Name,Day,Sales,Revenue
-1,Store A,101,Product X,1,5,500
-1,Store A,101,Product X,2,8,800
-1,Store A,101,Product X,3,6,600
-1,Store A,102,Product Y,1,10,1500
-1,Store A,102,Product Y,2,7,1050
-1,Store A,102,Product Y,3,12,1800
-2,Store B,101,Product X,1,4,400
-2,Store B,101,Product X,2,6,600
-2,Store B,101,Product X,3,9,900
-2,Store B,102,Product Y,1,8,1200
-2,Store B,102,Product Y,2,5,750
-2,Store B,102,Product Y,3,11,1650
-3,Store C,101,Product X,1,3,300
-3,Store C,101,Product X,2,7,700
-3,Store C,101,Product X,3,8,800
-3,Store C,102,Product Y,1,9,1350
-3,Store C,102,Product Y,2,6,900
-3,Store C,102,Product Y,3,10,1500
-4,Store D,101,Product X,1,2,200
-4,Store D,101,Product X,2,5,500
-4,Store D,101,Product X,3,7,700
-4,Store D,102,Product Y,1,6,900
-4,Store D,102,Product Y,2,4,600
-4,Store D,102,Product Y,3,9,1350
+Product_ID,Product_Name,Category,Brand,Price,Stock,Rating
+101,Apple iPhone 15,Smartphones,Apple,999,50,4.8
+102,Samsung Galaxy S23,Smartphones,Samsung,899,40,4.7
+103,Google Pixel 7,Smartphones,Google,799,30,4.6
+104,Dell XPS 15,Laptops,Dell,1499,25,4.5
+105,MacBook Pro 14,Laptops,Apple,1999,20,4.9
+106,HP Spectre x360,Laptops,HP,1299,30,4.4
+107,PlayStation 5,Consoles,Sony,499,60,4.9
+108,Xbox Series X,Consoles,Microsoft,499,55,4.8
+109,Nintendo Switch OLED,Consoles,Nintendo,349,70,4.7
+110,Sony WH-1000XM5,Headphones,Sony,399,100,4.8
+111,Bose QuietComfort 45,Headphones,Bose,329,90,4.7
+112,AirPods Pro 2,Headphones,Apple,249,120,4.8
+113,Galaxy Buds 2 Pro,Headphones,Samsung,229,110,4.6
+114,Cannon EOS R5,Cameras,Canon,3899,15,4.9
+115,Nikon Z9,Cameras,Nikon,5499,10,4.8
+116,Samsung 65" QLED TV,Televisions,Samsung,1199,25,4.7
+117,LG C3 OLED 55",Televisions,LG,1399,20,4.8
+118,Apple iPad Pro 12.9,Tablets,Apple,1099,35,4.7
+119,Amazon Kindle Paperwhite,Tablets,Amazon,149,200,4.8
+120,GoPro Hero 11,Cameras,GoPro,499,40,4.7
