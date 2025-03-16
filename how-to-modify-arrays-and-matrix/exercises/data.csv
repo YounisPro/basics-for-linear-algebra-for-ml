@@ -1,0 +1,25 @@
+Store_ID,Store_Name,Product_ID,Product_Name,Day,Sales,Revenue
+1,Store A,101,Product X,1,5,500
+1,Store A,101,Product X,2,8,800
+1,Store A,101,Product X,3,6,600
+1,Store A,102,Product Y,1,10,1500
+1,Store A,102,Product Y,2,7,1050
+1,Store A,102,Product Y,3,12,1800
+2,Store B,101,Product X,1,4,400
+2,Store B,101,Product X,2,6,600
+2,Store B,101,Product X,3,9,900
+2,Store B,102,Product Y,1,8,1200
+2,Store B,102,Product Y,2,5,750
+2,Store B,102,Product Y,3,11,1650
+3,Store C,101,Product X,1,3,300
+3,Store C,101,Product X,2,7,700
+3,Store C,101,Product X,3,8,800
+3,Store C,102,Product Y,1,9,1350
+3,Store C,102,Product Y,2,6,900
+3,Store C,102,Product Y,3,10,1500
+4,Store D,101,Product X,1,2,200
+4,Store D,101,Product X,2,5,500
+4,Store D,101,Product X,3,7,700
+4,Store D,102,Product Y,1,6,900
+4,Store D,102,Product Y,2,4,600
+4,Store D,102,Product Y,3,9,1350
