@@ -1,6 +1,10 @@
 from numpy import array
 # creating array
-arr = array([9, 18, 27, 36, 45])
+arr = array([
+    [9, 18, 27],
+    [36, 45, 54],
+    [63, 72, 81]
+])
 # printing array
 print(arr)
 print("\n")
