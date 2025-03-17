@@ -36,3 +36,6 @@ custom_broadcasting_time_taken = time.time() - start
 
 print(f"NumPy broadcasting time: {numpy_broadcasting_time_taken:.6f} sec")
 print(f"Custom broadcasting time: {custom_broadcasting_time_taken:.6f} sec")
+
+# NumPy broadcasting time: 0.003479 sec
+# Custom broadcasting time: 0.141590 sec
