@@ -4,9 +4,9 @@ from custom_functions import broadcasting_list
 
 # creating list of items
 list = [
-    [10, 20, 30],
-    [40, 50, 60],
-    [70, 80, 90]
+    [22, 24, 26, 28],
+    [30, 32, 34, 36],
+    [38, 40, 42, 44]
 ]
 
 # creating array
@@ -15,13 +15,11 @@ print(arr)
 print("\n")
 
 # broadcasting variable
-b = 15
-# here we get an array filled w.r.t length of actual array to make 
-# it able to do arithematic ops
+b = 20
 bArr = array(broadcasting_list(len(list), len(list[0]), b))
 print(bArr)
 print("\n")
 
-# broadcasting/subtracting b array from actual array
-result = arr - bArr
+# broadcasting/modulas b array from actual array
+result = arr % bArr
 print(result)

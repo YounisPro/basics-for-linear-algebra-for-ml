@@ -15,7 +15,7 @@ print("\n")
 
 # broadcasting variable
 b = 8
-# here we get an array filled to the length of actual array to make 
+# here we get an array filled w.r.t length of actual array to make 
 # it able to do arithematic ops
 bArr = array(broadcasting_list(len(list), len(list[0]), b))
 print(bArr)
