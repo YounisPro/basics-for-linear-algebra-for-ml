@@ -12,7 +12,7 @@ print("\n")
 # creating arrays of above datasets
 arr1 = array(a)
 arr2 = array(b)
-# adding two arrays
+# adding two arrays 
 sum = arr1 + arr2
 # output
 print(sum)
