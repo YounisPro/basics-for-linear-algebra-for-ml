@@ -1,8 +1,6 @@
 from numpy import array
 # creating vector one
-v1 = array([
-    [1, 2, 3]
-])
+v1 = array([1, 2, 3])
 print(v1)
 print("\n")
 
