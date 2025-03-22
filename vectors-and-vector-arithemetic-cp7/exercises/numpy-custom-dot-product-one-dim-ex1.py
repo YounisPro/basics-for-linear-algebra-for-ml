@@ -1,16 +1,17 @@
-from numpy import array
+from custom_functions import dot_product
+
 # creating vector one
-v1 = array([1, 2, 3])
+v1 = [1, 2, 3]
 print(v1)
 print("\n")
 
 # creating vector two
-v2 = array([1, 2, 3])
+v2 = [1, 2, 3]
 print(v2)
 print("\n")
 
 # dot product we do like this way
 # result = [(v1[0] x v2[0]) + (v1[1] x v2[1]) + (v1[2] x v2[2])]
 # doing dot product
-result = v1.dot(v2)
+result = dot_product(v1,v2)
 print(result)
