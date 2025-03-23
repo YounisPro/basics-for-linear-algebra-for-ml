@@ -1,5 +1,15 @@
 from numpy import array
 
+def trace(A):
+    rows = len(A)
+    cols = len(A[0])
+    sum = 0
+    for i in range(rows):
+        for j in range(cols):
+            if i == j:
+                sum += A[i][j]
+    return sum
+
 def inv(A):
     determinant = det(A)
     
