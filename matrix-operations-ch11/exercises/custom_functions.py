@@ -1,3 +1,5 @@
+from numpy import array
+
 def detArr(A, multiplier):
     rows = len(A)
 
@@ -5,7 +7,6 @@ def detArr(A, multiplier):
     if rows>2:
         for i in range(rows):
             pArr = []
-            s =""
             for j in range(rows):
                 tmpArr = []
                 for k in range(rows):
@@ -25,12 +26,16 @@ def detArr(A, multiplier):
 
 def det(A):
     arr = detArr(A, 1)
-    rows = len(arr)
-    cols = len(arr[0])
-    determinants = 0;
+    rows = 1 if isinstance(arr[0],int) else len(arr)
+    cols = len(arr) if isinstance(arr[0],int) else len(arr[0])
+    
+    if isinstance(arr[0],int):
+        arr = [arr]
+    determinants = 0
     for i in range(rows):
         sum = 0
         for j in range(cols):
+            # print( arr[i][j])
             sum = (sum - arr[i][j] if j%2 != 0 else sum + arr[i][j])
         determinants = (determinants - A[0][i] * sum) if i%2 != 0 else (determinants + A[0][i] * sum)
     return determinants
