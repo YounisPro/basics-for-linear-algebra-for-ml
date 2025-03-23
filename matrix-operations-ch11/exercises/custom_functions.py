@@ -1,3 +1,40 @@
+def detArr(A, multiplier):
+    rows = len(A)
+
+    arr = []
+    if rows>2:
+        for i in range(rows):
+            pArr = []
+            s =""
+            for j in range(rows):
+                tmpArr = []
+                for k in range(rows):
+                    if k != i and j != 0:
+                        tmpArr.append(A[j][k])
+                
+                if len(tmpArr)>0:
+                    pArr.append(tmpArr)
+            pArr = detArr(pArr, A[0][i])
+            arr.append(pArr)
+    else:
+        sum = multiplier*((A[0][0] * A[1][1]) - (A[0][1] * A[1][0]))
+        arr = sum
+    
+    return arr
+
+
+def det(A):
+    arr = detArr(A, 1)
+    rows = len(arr)
+    cols = len(arr[0])
+    determinants = 0;
+    for i in range(rows):
+        sum = 0
+        for j in range(cols):
+            sum = (sum - arr[i][j] if j%2 != 0 else sum + arr[i][j])
+        determinants = (determinants - A[0][i] * sum) if i%2 != 0 else (determinants + A[0][i] * sum)
+    return determinants
+
 def diag(A):
     isSingleRow = True if isinstance(A[0], int) else False
     arr = []
