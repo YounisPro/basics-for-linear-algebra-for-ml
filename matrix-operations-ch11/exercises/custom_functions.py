@@ -1,5 +1,33 @@
 from numpy import array
 
+def inv(A):
+    determinant = det(A)
+    
+    if determinant != 0:
+        adjugate = adj(A)
+        
+        T = transpose(adjugate)
+        rows = len(T)
+        cols = len(T[0])
+        arr = []
+        for i in range(rows):
+            tmpArr = []
+            for j in range(cols):
+                tmpArr.append(adjugate[i][j]/determinant)
+            arr.append(tmpArr)
+        return arr
+    else:
+        return A
+
+def adj(A):
+    if len(A) == 2:
+        return [
+            [A[1][1], -A[0][1]],
+            [-A[1][0], A[0][0]]
+        ]
+    else:
+        return detArr(A, 1)
+    
 def detArr(A, multiplier):
     rows = len(A)
 
@@ -26,6 +54,9 @@ def detArr(A, multiplier):
 
 def det(A):
     arr = detArr(A, 1)
+    if isinstance(arr,int) or isinstance(arr,float):
+        return arr
+    
     rows = 1 if isinstance(arr[0],int) else len(arr)
     cols = len(arr) if isinstance(arr[0],int) else len(arr[0])
     
@@ -85,7 +116,7 @@ def identity(size):
 def transpose(A):
     rows = len(A)
     cols = len(A[0])
-
+    
     arr = []
     for i in range(rows):
         tmpArr = []
