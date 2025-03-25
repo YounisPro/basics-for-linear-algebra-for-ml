@@ -1,5 +1,47 @@
 from numpy import array
 
+def matrix_rank(A):
+    rows = len(A)
+    cols = len(A[0])
+    matrix_rank_map = {}
+    matrix_map = {}
+    all_cols_0 = {}
+
+    for i in range(rows):
+        key = ":".join(map(str,A[i]))
+        zeros_key = ":".join(["0"] * len(A[i]))
+        
+        if key in matrix_rank_map:
+            matrix_rank_map[key] = 1
+        elif zeros_key != key:
+            matrix_rank_map[key] = 1
+            matrix_map[key] = A[i]
+            all_cols_0[A[i][0]] = A[i]
+    
+    for key in matrix_map:
+        for k in matrix_map:
+            if k != key:
+                arr1 = matrix_map[key]
+                arr2 = matrix_map[k]
+            
+                divident_map = {}
+                for i in range(len(arr1)):
+                    # print(arr2[i]," % ",arr1[i])
+                    if arr2[i] % arr1[i] == 0:
+                        # print(arr2[i]," / ",arr1[i])
+                        divident = arr2[i] / arr1[i]
+                        
+                        if divident in divident_map:
+                            divident_map[divident] = divident_map[divident]+1
+                        else: 
+                            divident_map[divident] = 1
+                
+                if len(divident_map) == 1 and list(divident_map.values())[0] == float(len(arr1)):
+                    matrix_rank_map[key] = matrix_rank_map[key]-1 
+    
+    return sum(matrix_rank_map.values())
+
+# this method is used to sum matrix diangonally from top left to bottom right
 def trace(A):
     rows = len(A)
     cols = len(A[0])
@@ -10,6 +52,7 @@ def trace(A):
                 sum += A[i][j]
     return sum
 
+# this method is used to inverse matrix
 def inv(A):
     determinant = det(A)
     
@@ -29,6 +72,7 @@ def inv(A):
     else:
         return A
 
+# this method is used to get adjugate of matrix
 def adj(A):
     if len(A) == 2:
         return [
@@ -38,6 +82,7 @@ def adj(A):
     else:
         return detArr(A, 1)
     
+# this method is used to get determinants array
 def detArr(A, multiplier):
     rows = len(A)
 
@@ -61,7 +106,7 @@ def detArr(A, multiplier):
     
     return arr
 
-
+# this method is used to get determinant value of matrix
 def det(A):
     arr = detArr(A, 1)
     if isinstance(arr,int) or isinstance(arr,float):
